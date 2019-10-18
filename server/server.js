@@ -38,9 +38,21 @@ app.get('/task', (req, res) => {
             
         })
         .catch((error) => {
-            res.sendStatus(400);
+            res.sendStatus(500);
             console.log(error);
             
+        })
+})
+
+app.post('/task', (req, res) => {
+    const queryText = `INSERT INTO "tasks"("task", "is_completed")
+                        VALUES ($1, $2);`;
+    pool.query(queryText, [req.body.task, req.body.is_completed])
+        .then((result) => {
+            res.sendStatus(200);
+        })
+        .catch((error) => {
+            res.sendStatus(500);
         })
 })
 

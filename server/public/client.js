@@ -2,6 +2,9 @@ $(document).ready(readyNow);
 
 function readyNow() {
     getTasks();
+    $('#addTask').on('click', addTask);
+    $('.tableContainer').on('click', '.completeButton', completeTask);
+    $('.tableContainer').on('click', '.deleteButton', deleteTask)
 }
 
 function getTasks() {
@@ -34,4 +37,29 @@ function printTasks(tasks) {
             row.append(`<td><button class="deleteButton">Delete</button>`);
             $('#tableBody').append(row);
     }
+}
+
+function addTask() {
+    let taskToSend = {
+        task: $('#taskInput').val(),
+        is_completed: false
+    }
+
+    $.ajax({
+        url: '/task',
+        type: 'POST',
+        data: taskToSend
+    }).then( function(response) {
+        getTasks();
+    }).catch( function(error) {
+        console.log('error in POST', error);
+    })
+}
+
+function completeTask() {
+    
+}
+
+function deleteTask() {
+
 }
