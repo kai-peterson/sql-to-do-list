@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,11 +10,14 @@
     <script src="client.js"></script>
     <title>SQL To-Do List</title>
 </head>
+
 <body>
     <h2>To-Do List:</h2>
-    <h3>Add new task</h3>
-    <input id="taskInput" type="text" placeholder="task">
-    <button id="addTask">Add Task</button>
+    <div class="addTaskInputs">
+        <h3>Add new task</h3>
+        <input id="taskInput" type="text" placeholder="task">
+        <button id="addTask">Add Task</button>
+    </div>
     <div class="tableContainer">
         <table>
             <thead>
@@ -30,4 +34,5 @@
         </table>
     </div>
 </body>
+
 </html>

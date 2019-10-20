@@ -1,20 +1,60 @@
-.tableContainer {
-    /* margin: 0 auto; */
-    max-width: 50vw;
-    max-height: 50vw;
-    margin-top: 30px;
-    background-color: lightgray;
+body {
+    background-image: url('/images/lilypads.png');
+}
+
+h2 {
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    width: 200px;
+}
+
+h3 {
+    margin-top: 0;
+}
+
+.addTaskInputs {
+    margin: 0 auto;
+    max-width: 200px;
+    padding: 10px;
+    padding-bottom: 20px;
+    padding-top: 10px;
+    background-color: darkgray;
+    border: 2px dotted black;
 }
 
 table {
-    /* margin: 0 auto; */
+    margin: 0 auto;
+    max-width: 35vw;
+    max-height: 35vw;
+    margin-top: 30px;
+    background-color: lightgray;
     border-collapse: collapse;
+    border: 2px solid black;
 }
+
+/* table {
+    margin: 0 auto;
+    border-collapse: collapse;
+} */
 
 td, th {
     padding: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: center;
+}
+
+.status {
+    padding-left: 25px;
+    padding-right: 25px;
 }
 
 thead {
     background-color: gray;
+}
+
+tr {
+    border: 2px solid black;
 }

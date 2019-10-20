@@ -8,4 +8,6 @@ CREATE TABLE koalas(
 INSERT INTO "tasks"("task", "is_completed")
 VALUES ('test-task1', 'Y'), ('test-task2', 'N'), ('test-task3', 'Y');
 
-SELECT * FROM "tasks"
+SELECT * FROM "tasks" ORDER BY "id";
+
+UPDATE "tasks" SET "is_completed"=true WHERE "id"=$1;
