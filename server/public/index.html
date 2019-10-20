@@ -12,7 +12,6 @@
 </head>
 
 <body>
-    <!-- <div class="containerFlex"> -->
     <div class="headerFlex">
         <h1>To-Do List</h1>
         <div class="addTaskInputs">
@@ -20,9 +19,9 @@
             <input id="taskInput" type="text" placeholder="task">
             <span id="category">Category:</span>
             <select name="category" id="taskCategory">
-                <option>Coding</option>
-                <option>Home Life</option>
-                <option>Random</option>
+                <option value="coding">Coding</option>
+                <option value="home life">Home Life</option>
+                <option value="random">Random</option>
             </select>
             <button id="addTask">Add Task</button>
         </div>
@@ -40,7 +39,7 @@
                     <th></th>
                 </tr>
             </thead>
-            <tbody id="tableBody">
+            <tbody id="codingTableBody">
 
             </tbody>
         </table>
@@ -48,7 +47,7 @@
     <div class="tableContainer">
         <table id="homeLifeTable">
             <thead>
-                <tr class="codingTableTitle">
+                <tr class="homeLifeTableTitle">
                     <th colspan="4" class="homeLifeTableTitle">Home Life</th>
                 </tr>
                 <tr id="tableHeader">
@@ -58,20 +57,14 @@
                     <th></th>
                 </tr>
             </thead>
-            <tbody id="tableBody">
-                <tr>
-                    <td>test-task1</td>
-                    <td>Incomplete</td>
-                    <td><button>Complete</button></td>
-                    <td><button>Delete</button></td>
-                </tr>
+            <tbody id="homeLifeTableBody">
             </tbody>
         </table>
     </div>
     <div class="tableContainer">
         <table id="randomTable">
             <thead>
-                <tr class="codingTableTitle">
+                <tr class="randomTableTitle">
                     <th colspan="4" class="randomTableTitle">Random</th>
                 </tr>
                 <tr id="tableHeader">
@@ -81,17 +74,10 @@
                     <th></th>
                 </tr>
             </thead>
-            <tbody id="tableBody">
-                <tr>
-                    <td>test-task1</td>
-                    <td>Incomplete</td>
-                    <td><button>Complete</button></td>
-                    <td><button>Delete</button></td>
-                </tr>
+            <tbody id="randomTableBody">
             </tbody>
         </table>
     </div>
-    <!-- </div> -->
 </body>
 
 </html>

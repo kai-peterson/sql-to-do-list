@@ -45,9 +45,9 @@ app.get('/task', (req, res) => {
 })
 
 app.post('/task', (req, res) => {
-    const queryText = `INSERT INTO "tasks"("task", "is_completed")
-                        VALUES ($1, $2);`;
-    pool.query(queryText, [req.body.task, req.body.is_completed])
+    const queryText = `INSERT INTO "tasks"("task", "is_completed", "category")
+                        VALUES ($1, $2, $3);`;
+    pool.query(queryText, [req.body.task, req.body.is_completed, req.body.category])
         .then((result) => {
             res.sendStatus(200);
         })

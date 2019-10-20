@@ -50,9 +50,8 @@ h3 {
 
 table {
     margin: 0;
-    max-width: 35vw;
-    max-height: 35vw;
-    margin-top: 30px;
+    max-width: 25vw;
+    margin-top: 45px;
     background-color: lightgray;
     border-collapse: collapse;
 }
@@ -63,19 +62,19 @@ table {
 }
 
 #codingTable {
-    margin-left: 25px;
+    margin-left: 20px;
 }
 
 #homeLifeTable {
     display: inline-block;
-    margin-top: 30px;
-    margin-left: 25px;
+    margin-top: 45px;
+    margin-left: 15px;
 }
 
 #randomTable {
     display: inline-block;
-    margin-top: 30px    ;
-    margin-left: 25px;
+    margin-top: 45px    ;
+    margin-left: 15px;
 }
 
 td, th {
@@ -83,6 +82,9 @@ td, th {
     padding-left: 15px;
     padding-right: 15px;
     text-align: center;
+    max-width: 75px;
+    word-wrap: break-word;
+    overflow: auto;
 }
 
 .status {
@@ -96,4 +98,20 @@ thead {
 
 tr {
     border: 2px solid black;
+}
+
+.check {
+    max-width: 25px;
+    max-height: 25px;
+}
+
+.status {
+    max-width: 30px;
+}
+
+.task {
+    min-width: 130px;
+    width: 80px;
+    height: 30px;
+    padding: 5px;
 }

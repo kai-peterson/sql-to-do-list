@@ -22,31 +22,42 @@ function getTasks() {
 
 function printTasks(tasks) {
     // append tasks to dOM
-    $('#tableBody').empty();
+    $('#codingTableBody').empty();
+    $('#homeLifeTableBody').empty();
+    $('#randomTableBody').empty();
     for (let i = 0; i < tasks.length; i++) {
         let row;
         if (tasks[i].is_completed == true) {
             row = $('<tr style="background-color:green"></tr>');
-            row.append(`<td>${tasks[i].task}</td>`);
-            row.append(`<td>Completed</td>`);
+            row.append(`<td class="task">${tasks[i].task}</td>`);
+            row.append(`<td class="status"><img class="check" src="./images/green-check.png" alt="green check mark"></td>`);
             row.append(`<td><button class="revertButton" data-id="${tasks[i].id}">Revert</button>`);
             row.append(`<td><button class="deleteButton" data-id="${tasks[i].id}">Delete</button>`);
         }
         else if (tasks[i].is_completed == false) {
             row = $('<tr></tr>');
-            row.append(`<td>${tasks[i].task}</td>`);
-            row.append(`<td class="status">Incompleted</td>`);
+            row.append(`<td class="task">${tasks[i].task}</td>`);
+            row.append(`<td class="status"><img class="check" src="./images/red-x.png" alt="red x mark"></td>`);
             row.append(`<td><button class="completeButton" data-id="${tasks[i].id}">Complete</button>`);
             row.append(`<td><button class="deleteButton" data-id="${tasks[i].id}">Delete</button>`);
         }
-        $('#tableBody').append(row);
+        if (tasks[i].category == 'coding') {
+            $('#codingTableBody').append(row);
+        }
+        else if (tasks[i].category == 'home life') {
+            $('#homeLifeTableBody').append(row);
+        }
+        else if (tasks[i].category == 'random') {
+            $('#randomTableBody').append(row);
+        }
     }
 }
 
 function addTask() {
     let taskToSend = {
         task: $('#taskInput').val(),
-        is_completed: false
+        is_completed: false,
+        category: $('#taskCategory').val()
     }
 
     $.ajax({
@@ -81,7 +92,7 @@ function completeTask() {
 function revertTask() {
     // grab task id
     const id = $(this).data('id')
-    
+
     // send put req to server to update "is_completed" to false
     $.ajax({
         url: `/task/incomplete/${id}`,
