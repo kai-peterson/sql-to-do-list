@@ -1,6 +1,10 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 body {
     display: flex;
-    background-image: url('/images/lilypads.png');
+    background-image: url('/images/bananas.png');
 }
 
 .headerFlex {
@@ -15,11 +19,16 @@ h1 {
     margin-bottom: 50px;
     margin-left: 50px;
     text-align: center;
-    width: 10vw;
+    width: 12vw;
+    text-shadow: -1.5px 0 lightcoral, 0 1.5px lightcoral, 1.5px 0 lightcoral, 0 -1.5px lightcoral;
+    font-size: 40px;
 }
 
 h3 {
     margin-top: 0;
+    margin-bottom: 10px;
+    text-shadow: -0.6px 0 lightcoral, 0 0.6px lightcoral, 0.6px 0 lightcoral, 0 -0.6px lightcoral;
+    font-size: 22px;
 }
 
 .addTaskInputs {
@@ -29,8 +38,8 @@ h3 {
     padding-bottom: 20px;
     padding-top: 10px;
     margin-left: 20px;
-    background-color: darkgray;
-    border: 2px dotted black;
+    background-color: rgba(106, 255, 141, 0.851);
+    border: 2px ridge rgb(255, 240, 71);
     float: top;
 }
 
@@ -52,7 +61,7 @@ table {
     margin: 0;
     max-width: 25vw;
     margin-top: 45px;
-    background-color: lightgray;
+    background-color: rgba(105, 252, 230, 0.735);
     border-collapse: collapse;
 }
 
@@ -93,16 +102,21 @@ td, th {
 }
 
 thead {
-    background-color: gray;
+    background-color: rgba(84, 191, 175, 0.735);
 }
 
 tr {
-    border: 2px solid black;
+    border: 2px outset rgb(255, 171, 45);
 }
 
 .check {
     max-width: 25px;
     max-height: 25px;
+}
+
+.red-x {
+    width: 35px;
+    height: 23px;
 }
 
 .status {
@@ -114,4 +128,16 @@ tr {
     width: 80px;
     height: 30px;
     padding: 5px;
+}
+
+.codingTableTitle {
+    background-color: lightblue;
+}
+
+.homeLifeTableTitle {
+    background-color: lightyellow;
+}
+
+.randomTableTitle {
+    background-color: salmon;
 }

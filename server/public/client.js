@@ -37,7 +37,7 @@ function printTasks(tasks) {
         else if (tasks[i].is_completed == false) {
             row = $('<tr></tr>');
             row.append(`<td class="task">${tasks[i].task}</td>`);
-            row.append(`<td class="status"><img class="check" src="./images/red-x.png" alt="red x mark"></td>`);
+            row.append(`<td class="status"><img class="red-x" src="./images/red-x.png" alt="red x mark"></td>`);
             row.append(`<td><button class="completeButton" data-id="${tasks[i].id}">Complete</button>`);
             row.append(`<td><button class="deleteButton" data-id="${tasks[i].id}">Delete</button>`);
         }
