@@ -1,7 +1,6 @@
 const express = require('express');
 const app = express();
-const pg = require('pg');
-const pool = require('./modules/pool.js')
+const pool = require('./modules/pool.js');
 const bodyParser = require('body-parser');
 const PORT = process.env.PORT || 5000;
 // const router = require('./routes/THISrouter')
