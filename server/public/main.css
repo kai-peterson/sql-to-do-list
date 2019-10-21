@@ -141,3 +141,11 @@ tr {
 .randomTableTitle {
     background-color: salmon;
 }
+
+/* .completeButton,
+.deleteButton,
+.revertButton {
+    max-width: 80px;
+    max-height: 30px;
+    font-size: 10px;
+} */
