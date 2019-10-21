@@ -28,7 +28,7 @@ function printTasks(tasks) {
     for (let i = 0; i < tasks.length; i++) {
         let row;
         if (tasks[i].is_completed == true) {
-            row = $('<tr style="background-color:green"></tr>');
+            row = $('<tr style="background-color:rgba(106, 255, 141, 0.851)"></tr>');
             row.append(`<td class="task">${tasks[i].task}</td>`);
             row.append(`<td class="status"><img class="check" src="./images/green-check.png" alt="green check mark"></td>`);
             row.append(`<td><button class="revertButton" data-id="${tasks[i].id}">Revert</button>`);

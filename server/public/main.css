@@ -38,8 +38,8 @@ h3 {
     padding-bottom: 20px;
     padding-top: 10px;
     margin-left: 20px;
-    background-color: rgba(106, 255, 141, 0.851);
-    border: 2px ridge rgb(255, 240, 71);
+    background-color: whitesmoke;
+    border: 2px ridge black;
     float: top;
 }
 
@@ -61,7 +61,7 @@ table {
     margin: 0;
     max-width: 25vw;
     margin-top: 45px;
-    background-color: rgba(105, 252, 230, 0.735);
+    background-color: whitesmoke;
     border-collapse: collapse;
 }
 
@@ -106,7 +106,7 @@ thead {
 }
 
 tr {
-    border: 2px outset rgb(255, 171, 45);
+    border: 2px solid rgba(0, 0, 0, 0.762);
 }
 
 .check {
@@ -131,7 +131,7 @@ tr {
 }
 
 .codingTableTitle {
-    background-color: lightblue;
+    background-color: rgb(173, 213, 230);
 }
 
 .homeLifeTableTitle {
