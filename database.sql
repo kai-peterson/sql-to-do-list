@@ -1,7 +1,7 @@
 CREATE TABLE tasks(
 	"id" SERIAL PRIMARY KEY,
 	"task" VARCHAR (80) NOT NULL,
-	"is_completed" VARCHAR (1) NOT NULL,
+	"is_completed" VARCHAR (10) NOT NULL,
     "category" VARCHAR (30) NOT NULL
 );
 
