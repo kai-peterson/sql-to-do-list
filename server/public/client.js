@@ -56,7 +56,7 @@ function printTasks(tasks) {
 function addTask() {
     let taskToSend = {
         task: $('#taskInput').val(),
-        is_completed: false,
+        is_completed: 'false',
         category: $('#taskCategory').val()
     }
 
