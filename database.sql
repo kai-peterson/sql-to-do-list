@@ -1,7 +1,8 @@
 CREATE TABLE koalas(
 	"id" SERIAL PRIMARY KEY,
 	"task" VARCHAR (80) NOT NULL,
-	"is_completed" VARCHAR (1) NOT NULL
+	"is_completed" VARCHAR (1) NOT NULL,
+    "category" VARCHAR (30) NOT NULL
 );
 
 -- test tasks to insert initially
