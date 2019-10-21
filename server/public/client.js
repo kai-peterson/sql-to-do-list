@@ -27,14 +27,14 @@ function printTasks(tasks) {
     $('#randomTableBody').empty();
     for (let i = 0; i < tasks.length; i++) {
         let row;
-        if (tasks[i].is_completed == true) {
+        if (tasks[i].is_completed == 'true') {
             row = $('<tr style="background-color:rgba(106, 255, 141, 0.851)"></tr>');
             row.append(`<td class="task">${tasks[i].task}</td>`);
             row.append(`<td class="status"><img class="check" src="./images/green-check.png" alt="green check mark"></td>`);
             row.append(`<td><button class="revertButton" data-id="${tasks[i].id}">Revert</button>`);
             row.append(`<td><button class="deleteButton" data-id="${tasks[i].id}">Delete</button>`);
         }
-        else if (tasks[i].is_completed == false) {
+        else if (tasks[i].is_completed == 'false') {
             row = $('<tr></tr>');
             row.append(`<td class="task">${tasks[i].task}</td>`);
             row.append(`<td class="status"><img class="red-x" src="./images/red-x.png" alt="red x mark"></td>`);
