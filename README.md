@@ -2,7 +2,7 @@
 
 To-Do list built using postgresSQL
 
-Deploy site: https://sql-to-do-list.herokuapp.com/
+Deployed site: https://sql-to-do-list.herokuapp.com/
 - Click the link above for a fully-functional version of the app
 
 
